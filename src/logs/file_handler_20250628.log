@@ -1,0 +1,2 @@
+2025-06-28 13:35:20,266 - file_handler - DEBUG - Ausgabeverzeichnis erstellt/verifiziert: ready_chunks
+2025-06-28 13:35:20,266 - file_handler - INFO - FileHandler initialisiert mit output_dir=ready_chunks

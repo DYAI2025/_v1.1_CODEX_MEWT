@@ -1,0 +1,2 @@
+2025-06-28 13:42:11,925 - text_chunker - INFO - TextChunker initialisiert mit max_chunk_size=5000
+2025-06-28 13:43:55,711 - text_chunker - INFO - Text aufgeteilt in 1547 Chunks
