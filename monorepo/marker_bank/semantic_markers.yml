@@ -1,0 +1,3 @@
+- id: scam
+  pattern: "Überweisung|Bankkonto"
+  score: 2

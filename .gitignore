@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.log
+.env
+venv/
+.env.local
+ready_chunks/
+logs/
+node_modules/
+.DS_Store

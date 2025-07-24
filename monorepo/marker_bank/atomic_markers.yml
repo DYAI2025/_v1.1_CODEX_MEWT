@@ -1,0 +1,3 @@
+- id: greet
+  pattern: "hallo|hi|hello"
+  score: 1

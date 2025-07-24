@@ -1,0 +1,5 @@
+- id: emotion_happy
+  patterns:
+    - "😊"
+    - "🎉"
+  score: 1
