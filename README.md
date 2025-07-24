@@ -1,4 +1,5 @@
 # Marker Engine
+![CI](https://github.com/USER/REPO/actions/workflows/ci.yml/badge.svg)
 
 A modular platform for chat analysis built with FastAPI and Streamlit. It processes chat exports and audio files, chunks text, and applies YAML-based rules to generate insights.
 

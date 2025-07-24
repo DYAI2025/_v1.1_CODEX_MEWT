@@ -1,0 +1,5 @@
+{
+  "marker_dir": "monorepo/marker_bank",
+  "positive_markers": ["greet", "emotion_happy"],
+  "negative_markers": ["scam"]
+}

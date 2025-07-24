@@ -2,6 +2,7 @@ import uuid
 import zipfile
 from fastapi import APIRouter, UploadFile, File
 from fastapi.responses import JSONResponse
+from mewt.marker_frequency import MarkerFrequencyCounter
 from ..models import AnalysisResult
 from ....services.transcription_service import TranscriptionService
 from ....services.chunking_service import ChunkingService
@@ -52,3 +53,18 @@ async def get_result(analysis_id: str):
     if not data:
         return JSONResponse(status_code=404, content={"detail": "not found"})
     return data
+
+
+@router.get("/summary/{analysis_id}")
+async def get_summary(analysis_id: str):
+    data = _results.get(analysis_id)
+    if not data:
+        return JSONResponse(status_code=404, content={"detail": "not found"})
+    freq = MarkerFrequencyCounter().count(data.chunks)
+    return {"id": analysis_id, "frequencies": freq}
+
+
+@router.post("/reload")
+async def reload_results():
+    _results.clear()
+    return {"status": "reloaded"}
