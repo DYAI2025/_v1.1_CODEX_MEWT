@@ -1,58 +1,27 @@
-# Chat Chunker
+# Marker Engine
 
-Ein Tool zum Aufteilen großer Chat-Dateien in verarbeitbare Chunks von maximal 5000 Zeichen.
+A modular platform for chat analysis built with FastAPI and Streamlit. It processes chat exports and audio files, chunks text, and applies YAML-based rules to generate insights.
 
 ## Features
+- File upload of WhatsApp ZIP or plain text
+- Optional audio transcription (Whisper)
+- Chunking of conversations into pieces of max 5000 characters
+- Rule based analysis using markers defined in YAML
+- REST API with OpenAPI docs
+- Minimal Streamlit frontend
 
-- 📁 Drag & Drop GUI für einfache Dateiverarbeitung
-- ✂️ Intelligente Text-Aufteilung an Wortgrenzen
-- 💬 Sprecher-Erkennung und formatierte Darstellung
-- 📝 Automatische Benennung: NAME_ch001.txt, NAME_ch002.txt, etc.
-- 📂 Organisierte Ausgabe im `ready_chunks/` Verzeichnis
-
-## Installation
-
-1. Repository klonen:
+## Quickstart
 ```bash
-git clone https://github.com/Narion2025/chat_chunker.git
-cd chat_chunker
-```
-
-2. Virtuelle Umgebung erstellen und aktivieren:
-```bash
-python -m venv venv
-source venv/bin/activate  # Auf Windows: venv\Scripts\activate
-```
-
-3. Dependencies installieren:
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Run API
+uvicorn monorepo.backend.app.main:app --reload
 ```
 
-## Verwendung
-
-1. Programm starten:
+Run tests:
 ```bash
-python -m src.main
+pytest -q
 ```
 
-2. Text-Dateien per Drag & Drop in das Fenster ziehen
-3. "Process" Button klicken
-4. Verarbeitete Chunks finden Sie im `ready_chunks/` Verzeichnis
-
-## Unterstützte Formate
-
-- Standard .txt Dateien
-- WhatsApp Chat-Exporte
-- Andere Chat-Formate mit klarer Sprecher-Kennzeichnung
-
-## Entwicklung
-
-Tests ausführen:
-```bash
-pytest tests/ -v --cov=src
-```
-
-## Lizenz
-
-MIT License 
+A docker-compose file is provided to start the API, frontend and MongoDB.

@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {"type": "string"},
+    "chunks": {"type": "array"}
+  },
+  "required": ["id", "chunks"]
+}
